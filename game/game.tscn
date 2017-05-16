@@ -6,7 +6,8 @@
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 425.463, 118.324 )
+transform/pos = Vector2( 577.232, 288.662 )
+transform/scale = Vector2( 6.47598, 5.39569 )
 texture = ExtResource( 1 )
 
 
