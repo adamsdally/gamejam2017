@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://game/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/fonts/test.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://assets/tiles_test.tres" type="TileSet" id=3]
+[ext_resource path="res://game/shifter.tscn" type="PackedScene" id=4]
 
 [node name="game" type="Node2D"]
 
@@ -27,5 +29,30 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 70, 70 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 458752, 1, 458753, 1, 458756, 1, 458757, 1, 458758, 1, 458759, 1, 458760, 1, 458761, 1, 458762, 1, 458763, 1, 458764, 1, 458765, 1, 458766, 1, 524288, 0, 524289, 0, 524292, 0, 524293, 0, 524294, 0, 524295, 0, 524296, 0, 524297, 0, 524298, 0, 524299, 0, 524300, 0, 524301, 0, 524302, 0 )
+
+[node name="shifter" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 210, 595 )
+transform/scale = Vector2( 2.1875, 1.09375 )
+room = "1-a"
+location = "b"
 
 

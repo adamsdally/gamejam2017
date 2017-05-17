@@ -3,7 +3,7 @@ extends RigidBody2D
 # Character Properties
 var acceleration = 2000
 var top_move_speed = 200
-var top_jump_speed = 300
+var top_jump_speed = 100
 
 # Movement Vars
 var directional_force = Vector2()
