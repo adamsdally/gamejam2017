@@ -35,6 +35,11 @@ func _integrate_forces(state):
 		#if !state.get_linear_velocity().y:
 		directional_force += DIRECTION.UP
 		
+	if Input.is_action_pressed("ui_select"):
+		var collision_room = get_node("/root/global").collision_room
+		if collision_room:
+			get_node("/root/global").goto_room(collision_room.room, collision_room.location)
+	
 	final_force = state.get_linear_velocity() + (directional_force * acceleration)
 	
 	# Prevent Exceeding Top Speed

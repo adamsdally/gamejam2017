@@ -3,6 +3,7 @@ extends Node
 var current_scene = null
 var max_life_points = 5;
 var life_points = 5;
+var collision_room;
 
 
 
@@ -22,8 +23,10 @@ func _deferred_goto_room(room, location):
 	current_scene.free()
 	
 	# Load new scene
+	print("scene")
+	print(room)
 	var s = ResourceLoader.load("res://game/rooms/"+room+".tscn")
-	
+	print(s)
 	# Instance the new scene
 	current_scene = s.instance()
 	
@@ -35,10 +38,10 @@ func _deferred_goto_room(room, location):
 	print(startpos)
 	
 	#player
-	#var player_resource = preload("player.tscn")
-	#var player = player_resource.instance()
-	#player.set_pos(startpos)
-	#current_scene.add_child(player)
+	var player_resource = preload("player.tscn")
+	var player = player_resource.instance()
+	player.set_pos(startpos)
+	current_scene.add_child(player)
 	
 	#hud
 	var hud_resource = preload("hud.tscn")

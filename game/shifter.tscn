@@ -34,4 +34,6 @@ texture = ExtResource( 2 )
 
 [connection signal="body_enter" from="." to="." method="_on_shifter_body_enter"]
 
+[connection signal="input_event" from="." to="." method="_on_shifter_input_event"]
+
 
