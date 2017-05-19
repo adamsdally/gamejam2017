@@ -10,9 +10,15 @@ export var location = ""
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	print(room)
 	pass
 
 func _on_shifter_body_enter( body ):
+	print(body)
 	if (body extends preload("res://game/player.gd")):
 		get_node("/root").print_tree()
 		get_node("/root/global").goto_room(room, location)
+
+
+func _on_door_body_enter( body ):
+	_on_shifter_body_enter(body)

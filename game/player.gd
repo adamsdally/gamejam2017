@@ -5,7 +5,7 @@ signal points_change
 # Character Properties
 var acceleration = 2000
 var top_move_speed = 400
-var top_jump_speed = 100
+var top_jump_speed = 300
 
 # Movement Vars
 var directional_force = Vector2()
@@ -46,8 +46,8 @@ func _integrate_forces(state):
 	# Prevent Exceeding Top Jump Speed
 	if final_force.y < -top_jump_speed:
 		final_force.y = -top_jump_speed
-	#if final_force.y > top_jump_speed:
-	#	final_force.y = top_jump_speed
+	if final_force.y > top_jump_speed:
+		final_force.y = top_jump_speed
 	
 	state.set_linear_velocity(final_force)
 	

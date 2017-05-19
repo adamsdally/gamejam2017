@@ -50,9 +50,8 @@ tile_data = IntArray( 458752, 1, 458753, 1, 458757, 1, 458758, 1, 458759, 1, 458
 
 [node name="shifter" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 245, 595 )
-transform/scale = Vector2( 3.28125, 1.09375 )
+transform/pos = Vector2( 237, 766 )
 room = "1-a"
-location = "b"
+location = "c"
 
 
