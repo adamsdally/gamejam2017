@@ -4,7 +4,7 @@ signal points_change
 
 # Character Properties
 var acceleration = 2000
-var top_move_speed = 200
+var top_move_speed = 400
 var top_jump_speed = 100
 
 # Movement Vars

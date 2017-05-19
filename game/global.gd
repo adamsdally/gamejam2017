@@ -43,7 +43,7 @@ func _deferred_goto_room(room, location):
 	#hud
 	var hud_resource = preload("hud.tscn")
 	var hud = hud_resource.instance()
-	hud.set_pos(Vector2(0,0))
+	#hud.get_node("life_points").set_pos(Vector2(0,0))
 	current_scene.add_child(hud)
 
 	# optional, to make it compatible with the SceneTree.change_scene() API
