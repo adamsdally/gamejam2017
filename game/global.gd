@@ -35,10 +35,10 @@ func _deferred_goto_room(room, location):
 	print(startpos)
 	
 	#player
-	var player_resource = preload("player.tscn")
-	var player = player_resource.instance()
-	player.set_pos(startpos)
-	current_scene.add_child(player)
+	#var player_resource = preload("player.tscn")
+	#var player = player_resource.instance()
+	#player.set_pos(startpos)
+	#current_scene.add_child(player)
 	
 	#hud
 	var hud_resource = preload("hud.tscn")

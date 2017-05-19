@@ -8,8 +8,7 @@
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
 
-cell/size = Vector2( 20, 20 )
-tile_data = IntArray( 65511, 536870917, 0, 1, 25, 3, 200, 536870915, 225, 536870913, 250, 536870912, 275, 5, 852018, 3, 852143, 536870915, 1704011, 4, 1704086, 536870916, 1966180, 0, 1966205, 536870914 )
+tile_data = IntArray( 65499, 2, 65524, 0, 13, 0, 38, 0, 63, 0, 88, 0, 113, 3, 1507489, 3, 3014865, 3 )
 
 [node name="bat" parent="." instance=ExtResource( 2 )]
 
