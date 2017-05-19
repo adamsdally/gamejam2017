@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 # class member variables go here, for example:
 # var a = 2
@@ -12,12 +12,7 @@ func _ready():
 	
 	pass
 	
-func _integrate_forces(state):
-	var final_force = Vector2()
-	
-	var directional_force = Vector2(-1,0)
-	
-	final_force = state.get_linear_velocity() + (directional_force * acceleration)
-	
-	
-	state.set_linear_velocity(final_force)
+func _on_bat_body_enter( body ):
+	if (body extends preload("res://game/player.gd")):
+		print("made it")
+		body.change_life(-1)

@@ -5,10 +5,13 @@ var max_life_points = 5;
 var life_points = 5;
 
 
+
 func _ready():
         var root = get_tree().get_root()
         current_scene = root.get_child( root.get_child_count() -1 )
 	
+
+
 func goto_room(room, location):
 	call_deferred("_deferred_goto_room", room, location)
 

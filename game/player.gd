@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+signal points_change
+
 # Character Properties
 var acceleration = 2000
 var top_move_speed = 200
@@ -16,9 +18,8 @@ const DIRECTION = {
 }
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	print("hello")
+	connect("body_enter", self, "_on_enemy_body_enter")
 
 func _integrate_forces(state):
 	var final_force = Vector2()
@@ -50,3 +51,7 @@ func _integrate_forces(state):
 	
 	state.set_linear_velocity(final_force)
 	
+func change_life(delta):
+	print(delta)
+	get_node("/root/global").life_points += delta
+	emit_signal("points_change")
