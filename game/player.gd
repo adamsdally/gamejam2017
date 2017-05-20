@@ -53,6 +53,11 @@ func _integrate_forces(state):
 		final_force.y = -top_jump_speed
 	if final_force.y > top_jump_speed:
 		final_force.y = top_jump_speed
+		
+	if final_force.x < -1:
+		set_scale(Vector2(-1,1))
+	if final_force.x >1:
+		set_scale(Vector2(1,1))
 	
 	state.set_linear_velocity(final_force)
 	
